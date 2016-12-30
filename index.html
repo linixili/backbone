@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片网</title>
+	<meta name='viewport' content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div id="app" style="display:none;">
+		<div class="list">
+			<div class="header">
+				<div class="go-back">
+					<div id="suaxin" ><img src="img/shuaxin.png" alt=""></div>
+				</div>
+				<h1 class="logo">我的图片网</h1>
+			</div>
+			<div class="search">
+				<input type="text" placeholder="搜索你想要的图片" >
+				<span class="searchbtn">搜一搜</span>
+			</div>
+			<ul class="type clearfix">
+				<li data-id='0'>摄影</li>
+				<li data-id='1'>灰机</li>
+				<li data-id='2'>壁纸</li>
+				<li data-id='3'>动物</li>
+				<li data-id='4'>动漫</li>
+				<li data-id='5'>明星</li>
+				<li data-id='6'>风景</li>
+				<li data-id='7'>家居</li>
+			</ul>
+			<div class="container clearfix">
+				<div class="tip"><img src="img/detail.png" alt=""></div>
+				<div class="containerleft">
+					
+				</div>
+				<div class="containerright">
+					
+				</div>
+			</div>
+			<div class="totop">返回<br>顶部</div>
+		</div>
+		<div class='layer'></div>
+		<div class='layer1'></div>
+	</div>
+	<script type="text/template" id="template">
+
+			<div class="container" style="<%=style%>">
+				<img src="<%=url%>" >
+			</div>	
+			<header class="layerheader">
+				<div class='backtoprev'>
+					<span class="arrow"><span class="arrow black"></span></span>
+				</div>
+				<h1 class='title'><%=title%></h1>
+			</header>
+		
+	
+	</script>
+	<script type="text/javascript" src='static/mod.js'></script>
+	<script type="text/javascript" src='static/lib/1zepto.js'></script>
+	<script type="text/javascript" src='static/modules/app.js'></script>
+	<script type="text/javascript">
+		var app=require("static/modules/app");
+		app();
+	</script>
+</body>
+</html>

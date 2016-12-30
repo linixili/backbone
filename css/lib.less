@@ -1,0 +1,74 @@
+// 定义配置
+// 字体
+@defaultFont: 14px;		// 默认字体大小
+@smallFont: 12px;		// 小字体
+@bigFont: 16px;			// 大字体
+@titleFont: 24px;		// title字体
+
+// 定义颜色
+@navColor: skyblue;		// 头部背景颜色
+@grayColor:  #E4E4E4;	// 模块灰色背景
+@fontColor: #666;		// 字体默认颜色
+@btnColor:#A9DDF5;		// 广告字体颜色
+@whiteColor: #def;		// 浅色调
+@borderColor: #ccc;		// border颜色
+@blackColor: #fafafa;		// 黑色字体
+@hdColor:#fff;
+
+// 定义间距
+@space: 20px;
+
+// 定义一些工具方法
+// 定义箭头
+.arrow(@dir: top, @w: 10px, @c: #000) {
+	// 定义所有边
+	border: @w solid transparent;
+	// 定义特殊的边
+	border-@{dir}: @w solid @c;
+	// 兼容块元素
+	width: 0;
+	// 兼容行内元素
+	font-size: 0;
+}
+// 定义字体垂直居中的方法
+.hlh(@h) {
+	height: @h;
+	line-height: @h;
+}
+// 定义绝对定位
+.absolute(@t: auto, @l: auto) {
+	position: absolute;
+	top: @t;
+	right: @l;
+}
+.position(@pos: static, @t: auto, @l: auto) {
+	position: @pos;
+	top: @t;
+	left: @l;
+}
+.tl(@t: auto, @l: auto) {
+	top: @t;
+	left: @l;
+}
+// 设置字体方法
+.font(@fz: @defaultFont, @c: @fontColor, @lh: inherit, @fw: inherit, @tc: left) {
+	font-size: @fz;
+	color: @c;
+	line-height: @lh;
+	font-weight: @fw;
+	text-align: @tc;
+}
+// 定义盒子宽高
+.size(@w: auto, @h: auto) {
+	width: @w;
+	height: @h;
+}
+.noline() {
+	text-decoration: none;
+}
+.padding(@t:0,@r:0,@b:0,@l:0){
+	padding-top:@t;
+	padding-right:@r;
+	padding-bottom:@b;
+	padding-left:@l;
+}
